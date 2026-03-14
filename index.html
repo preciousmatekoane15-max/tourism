@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Afriski Winter Adventure Festival</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        header h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: #34495e;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 600;
+            padding: 8px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        nav a:hover {
+            background: #3498db;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+        }
+        
+        .banner {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 400px;
+            align-items: center;
+        }
+        
+        .banner-image {
+            width: 45%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.5s ease;
+            border: 4px solid white;
+        }
+        
+        .banner-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+        
+        /* Fallback styling in case images don't load */
+        .banner-image {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5em;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .banner-image::before {
+            content: "⛷️";
+            font-size: 80px;
+            opacity: 0.3;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .banner-image[src], .banner-image:not([src=""])::before {
+            display: none;
+        }
+        
+        section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        section h2 {
+            color: #2c3e50;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        section h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, #3498db, #9b59b6);
+            border-radius: 2px;
+        }
+        
+        section h3 {
+            color: #34495e;
+            font-size: 1.5em;
+            margin: 20px 0 10px;
+        }
+        
+        section p {
+            color: #555;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        
+        .event-details {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .detail-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 40px;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: 600;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        footer p {
+            font-size: 1.2em;
+            letter-spacing: 1px;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            nav {
+                gap: 15px;
+            }
+            
+            nav a {
+                font-size: 0.9em;
+                padding: 6px 15px;
+            }
+            
+            .banner {
+                flex-direction: column;
+                align-items: center;
+                min-height: auto;
+            }
+            
+            .banner-image {
+                width: 90%;
+                height: 250px;
+            }
+            
+            section {
+                margin: 20px;
+                padding: 20px;
+            }
+            
+            .event-details {
+                gap: 20px;
+            }
+            
+            .detail-card {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Afriski Winter Adventure Festival 2026</h1>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="pages/about.html">ABOUT</a>
+            <a href="pages/programme.html">PROGRAMME</a>
+            <a href="pages/tickets.html">TICKETS</a>
+            <a href="pages/contact.html">CONTACT</a>
+        </nav>
+    </header>
+    
+    <div class="banner">
+        <img class="banner-image" src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Skiing Adventure at Afriski" onerror="this.src='https://via.placeholder.com/800x400?text=Afriski+Winter+Adventure'">
+        <img class="banner-image" src="https://images.unsplash.com/photo-1517322472922-7a2f8c0a6e4f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Afriski Mountain Resort Lesotho" onerror="this.src='https://via.placeholder.com/800x400?text=Maluti+Mountains+Lesotho'">
+    </div>
+    
+    <section>
+        <h2>Welcome to Africa's Winter Adventure</h2>
+        <p>Join us at the Afriski Winter Adventure Festival located high in the Maluti Mountains of Lesotho. This exciting tourism event brings together snow sports, music, culture and adventure in one spectacular location.</p>
+        
+        <div class="event-details">
+            <div class="detail-card">📅 18-21 July 2026</div>
+            <div class="detail-card">🏔️ Afriski Mountain Resort</div>
+            <div class="detail-card">🇱🇸 Lesotho</div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>Experience the Magic of African Winter ❄️</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About the Event</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        header h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: #34495e;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 600;
+            padding: 8px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        nav a:hover {
+            background: #3498db;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+        }
+        
+        section {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        section::before {
+            content: '⛷️';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 150px;
+            opacity: 0.05;
+            transform: rotate(15deg);
+        }
+        
+        section h2 {
+            color: #2c3e50;
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        section h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 4px;
+            background: linear-gradient(to right, #3498db, #9b59b6);
+            border-radius: 2px;
+        }
+        
+        section h3 {
+            color: #34495e;
+            font-size: 1.6em;
+            margin: 30px 0 20px;
+        }
+        
+        section h4 {
+            color: #34495e;
+            font-size: 1.3em;
+            margin: 25px 0 15px;
+        }
+        
+        section p {
+            color: #555;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        ol, ul {
+            margin: 20px 0 30px 40px;
+        }
+        
+        ol li, ul li {
+            color: #555;
+            font-size: 1.1em;
+            margin-bottom: 12px;
+            padding-left: 10px;
+        }
+        
+        ol li {
+            list-style-type: none;
+            counter-increment: item;
+            position: relative;
+        }
+        
+        ol li:before {
+            content: counter(item);
+            background: #3498db;
+            color: white;
+            font-weight: bold;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: inline-block;
+            text-align: center;
+            line-height: 25px;
+            margin-right: 10px;
+            font-size: 0.9em;
+        }
+        
+        ul li {
+            list-style-type: none;
+            position: relative;
+        }
+        
+        ul li:before {
+            content: '🏔️';
+            margin-right: 10px;
+            font-size: 1.1em;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+        
+        footer p {
+            font-size: 1.3em;
+            letter-spacing: 2px;
+            font-style: italic;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            nav {
+                gap: 15px;
+            }
+            
+            nav a {
+                font-size: 0.9em;
+                padding: 6px 15px;
+            }
+            
+            section {
+                margin: 20px;
+                padding: 20px;
+            }
+            
+            ol, ul {
+                margin-left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About the Festival</h1>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="programme.html">Programme</a>
+            <a href="tickets.html">Tickets</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    
+    <section>
+        <h2>About Afriski Winter Festival</h2>
+        <p>The Afriski Winter Adventure Festival widely known as Winterfest is the flagship event of the Afriski Mountain Resort, located 3,222 meters above sea level in Lesotho’s Maloti Mountains.The festival as we know it today began to take shape over a decade ago. It was designed to bridge the gap between hard-core snow sports and the vibrant South African music scene. By 2015, it was officially billed as "Africa’s highest altitude music festival.The event has expanded significantly, partnering with major sponsors like Jacaranda FM, Maluti Premium Lager, and Econet Lesotho. It now attracts thousands of "Winterfesters" who come for the music as much as the slopes.</p>
+        
+        <h3>Why this festival is important</h3>
+        <ol>
+            <li>Promotes tourism in Lesotho</li>
+            <li>Supports local businesses</li>
+            <li>Showcases Basotho culture</li>
+            <li>Encourages adventure tourism</li>
+        </ol>
+        
+        <h4>Target Tourists</h4>
+        <ul>
+            <li>Adventure tourists</li>
+            <li>Ski and snowboard lovers</li>
+            <li>International travellers</li>
+            <li>Families and holiday visitors</li>
+        </ul>
+    </section>
+    
+    <footer>
+        <p>Discover the Kingdom in the Sky </p>
+    </footer>
+</body>
+</html>
